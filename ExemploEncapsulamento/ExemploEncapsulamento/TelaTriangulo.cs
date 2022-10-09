@@ -25,47 +25,59 @@ namespace ExemploEncapsulamento
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             List<string> ListaErros = new List<string>();
-            decimal LadoA = 0, LadoB = 0, LadoC = 0;
+            double Hipotenusa = 0, CatetoA = 0, CatetoB = 0, Altura = 0;
 
-            if (string.IsNullOrEmpty(ttbLadoA.Text))
-                ListaErros.Add("O campo Lado A deve ser preenchido");
+            if (string.IsNullOrEmpty(ttbHipotenusa.Text))
+                ListaErros.Add("O campo Base deve ser preenchido");
             else
             {
                 try
                 {
-                    LadoA = decimal.Parse(ttbLadoA.Text);
+                    Hipotenusa = double.Parse(ttbHipotenusa.Text);
                 }
                 catch
                 {
-                    ListaErros.Add("\nDigitação inválida do campo Lado A!");
+                    ListaErros.Add("\nDigitação inválida do campo Base!");
                 }
             }
 
-            if (string.IsNullOrEmpty(ttbLadoB.Text))
-                ListaErros.Add("O campo Lado B deve ser preenchido");
+            if (string.IsNullOrEmpty(ttbCatetoA.Text))
+                ListaErros.Add("O campo Cateto A deve ser preenchido");
             else
             {
                 try
                 {
-                    LadoB = decimal.Parse(ttbLadoB.Text);
+                    CatetoA = double.Parse(ttbCatetoA.Text);
                 }
                 catch
                 {
-                    ListaErros.Add("\nDigitação inválida do campo Lado B!");
+                    ListaErros.Add("\nDigitação inválida do campo Cateto A!");
                 }
             }
 
-            if (string.IsNullOrEmpty(ttbLadoC.Text))
-                ListaErros.Add("O campo Lado C deve ser preenchido");
+            if (string.IsNullOrEmpty(ttbCatetoB.Text))
+                ListaErros.Add("O campo Cateto B deve ser preenchido");
             else
             {
                 try
                 {
-                    LadoC = decimal.Parse(ttbLadoC.Text);
+                    CatetoB = double.Parse(ttbCatetoB.Text);
                 }
                 catch
                 {
-                    ListaErros.Add("\nDigitação inválida do campo Lado C!");
+                    ListaErros.Add("\nDigitação inválida do campo Cateto B!");
+                }
+            }
+
+            if (ttbAltura.Text != "")
+            {
+                try
+                {
+                    Altura = double.Parse(ttbAltura.Text);
+                }
+                catch
+                {
+                    ListaErros.Add("\nDigitação inválida do campo Altura!");
                 }
             }
 
@@ -79,12 +91,9 @@ namespace ExemploEncapsulamento
                 return;
             }
 
-            Triangulo triangulo = new Triangulo(LadoA, LadoB, LadoC);
+            Triangulo triangulo = new Triangulo(Hipotenusa, CatetoA, CatetoB, Altura);
 
             triangulo.TipoTriangulo();
-      
-
-
         }
 
         private void retanguloToolStripMenuItem_Click(object sender, EventArgs e)

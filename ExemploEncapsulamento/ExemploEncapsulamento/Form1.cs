@@ -4,6 +4,7 @@ namespace ExemploEncapsulamento
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace ExemploEncapsulamento
                 }
             }
 
-            if(string.IsNullOrEmpty(ttbLargura.Text))
+            if (string.IsNullOrEmpty(ttbLargura.Text))
                 ListaErros.Add("\nO campo largura precisa ser preenchido!");
             else
             {
@@ -42,7 +43,7 @@ namespace ExemploEncapsulamento
                 }
             }
 
-            if(ListaErros.Count>0)
+            if (ListaErros.Count > 0)
             {
                 string erros = "";
                 foreach (string item in ListaErros)
@@ -54,7 +55,7 @@ namespace ExemploEncapsulamento
 
             //Utilizando construtor declarado na classe retangulo
             //passando a parametrização de altura e largura
-            Retangulo retangulo = new Retangulo(altura,largura);
+            Retangulo retangulo = new Retangulo(altura, largura);
 
             //Depois
             if (retangulo.EhRetangulo())

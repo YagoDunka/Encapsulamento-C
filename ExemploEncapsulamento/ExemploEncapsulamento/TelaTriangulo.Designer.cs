@@ -32,22 +32,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ttbLadoC = new System.Windows.Forms.TextBox();
-            this.ttbLadoB = new System.Windows.Forms.TextBox();
-            this.ttbLadoA = new System.Windows.Forms.TextBox();
+            this.ttbCatetoB = new System.Windows.Forms.TextBox();
+            this.ttbCatetoA = new System.Windows.Forms.TextBox();
+            this.ttbHipotenusa = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.calcularÁreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trianguloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retanguloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ttbAltura = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(245, 199);
+            this.btnCalcular.Location = new System.Drawing.Point(221, 204);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 23);
-            this.btnCalcular.TabIndex = 13;
+            this.btnCalcular.TabIndex = 5;
             this.btnCalcular.Text = "CALCULAR";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
@@ -55,50 +57,50 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 174);
+            this.label3.Location = new System.Drawing.Point(54, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 15);
+            this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Lado C";
+            this.label3.Text = "Cateto B";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 100);
+            this.label2.Location = new System.Drawing.Point(54, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 15);
+            this.label2.Size = new System.Drawing.Size(53, 15);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Lado B";
+            this.label2.Text = "Cateto A";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(54, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(68, 15);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Lado A";
+            this.label1.Text = "Hipotenusa";
             // 
-            // ttbLadoC
+            // ttbCatetoB
             // 
-            this.ttbLadoC.Location = new System.Drawing.Point(54, 199);
-            this.ttbLadoC.Name = "ttbLadoC";
-            this.ttbLadoC.Size = new System.Drawing.Size(100, 23);
-            this.ttbLadoC.TabIndex = 9;
+            this.ttbCatetoB.Location = new System.Drawing.Point(54, 205);
+            this.ttbCatetoB.Name = "ttbCatetoB";
+            this.ttbCatetoB.Size = new System.Drawing.Size(100, 23);
+            this.ttbCatetoB.TabIndex = 4;
             // 
-            // ttbLadoB
+            // ttbCatetoA
             // 
-            this.ttbLadoB.Location = new System.Drawing.Point(54, 125);
-            this.ttbLadoB.Name = "ttbLadoB";
-            this.ttbLadoB.Size = new System.Drawing.Size(100, 23);
-            this.ttbLadoB.TabIndex = 8;
+            this.ttbCatetoA.Location = new System.Drawing.Point(54, 133);
+            this.ttbCatetoA.Name = "ttbCatetoA";
+            this.ttbCatetoA.Size = new System.Drawing.Size(100, 23);
+            this.ttbCatetoA.TabIndex = 3;
             // 
-            // ttbLadoA
+            // ttbHipotenusa
             // 
-            this.ttbLadoA.Location = new System.Drawing.Point(54, 62);
-            this.ttbLadoA.Name = "ttbLadoA";
-            this.ttbLadoA.Size = new System.Drawing.Size(100, 23);
-            this.ttbLadoA.TabIndex = 7;
+            this.ttbHipotenusa.Location = new System.Drawing.Point(54, 62);
+            this.ttbHipotenusa.Name = "ttbHipotenusa";
+            this.ttbHipotenusa.Size = new System.Drawing.Size(100, 23);
+            this.ttbHipotenusa.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -106,7 +108,7 @@
             this.calcularÁreaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(349, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(358, 24);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -122,31 +124,49 @@
             // trianguloToolStripMenuItem
             // 
             this.trianguloToolStripMenuItem.Name = "trianguloToolStripMenuItem";
-            this.trianguloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.trianguloToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.trianguloToolStripMenuItem.Text = "Triangulo";
             // 
             // retanguloToolStripMenuItem
             // 
             this.retanguloToolStripMenuItem.Name = "retanguloToolStripMenuItem";
-            this.retanguloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retanguloToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.retanguloToolStripMenuItem.Text = "Retangulo";
             this.retanguloToolStripMenuItem.Click += new System.EventHandler(this.retanguloToolStripMenuItem_Click);
             // 
-            // Triangulo
+            // ttbAltura
+            // 
+            this.ttbAltura.Location = new System.Drawing.Point(221, 133);
+            this.ttbAltura.Name = "ttbAltura";
+            this.ttbAltura.Size = new System.Drawing.Size(100, 23);
+            this.ttbAltura.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(221, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 15);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Altura (Opcional)";
+            // 
+            // TelaTriangulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 266);
+            this.ClientSize = new System.Drawing.Size(358, 359);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.ttbAltura);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ttbLadoC);
-            this.Controls.Add(this.ttbLadoB);
-            this.Controls.Add(this.ttbLadoA);
+            this.Controls.Add(this.ttbCatetoB);
+            this.Controls.Add(this.ttbCatetoA);
+            this.Controls.Add(this.ttbHipotenusa);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Triangulo";
+            this.Name = "TelaTriangulo";
             this.Text = "Triangulo";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -161,12 +181,14 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox ttbLadoC;
-        private TextBox ttbLadoB;
-        private TextBox ttbLadoA;
+        private TextBox ttbCatetoB;
+        private TextBox ttbCatetoA;
+        private TextBox ttbHipotenusa;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem calcularÁreaToolStripMenuItem;
         private ToolStripMenuItem trianguloToolStripMenuItem;
         private ToolStripMenuItem retanguloToolStripMenuItem;
+        private TextBox ttbAltura;
+        private Label label4;
     }
 }

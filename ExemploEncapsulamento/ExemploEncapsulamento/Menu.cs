@@ -22,5 +22,11 @@ namespace ExemploEncapsulamento
             TelaTriangulo tela = new TelaTriangulo();
             tela.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 tela = new Form1();
+            tela.ShowDialog();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,50 +9,45 @@ namespace ExemploEncapsulamento.Modelos
 {
     public class Triangulo
     {
-        public decimal LadoA { get; private set; }
-        public decimal LadoB { get; private set; }
-        public decimal LadoC { get; private set; }
+        public double Hipotenusa { get; private set; }
+        public double CatetoA { get; private set; }
+        public double CatetoB { get; private set; }
+        public double Altura { get; private set; }
 
         public Triangulo()
         {
 
         }
 
-        public Triangulo(decimal ladoA, decimal ladoB, decimal ladoC)
+        public Triangulo (double Hipot, double catetoA, double catetoB, double altura)
         {
-            LadoA = ladoA;
-            LadoB = ladoB;
-            LadoC = ladoC;
+            Hipotenusa = Hipot;
+            CatetoA = catetoA;
+            CatetoB = catetoB;
+            Altura = altura;
         }
 
-        public decimal TipoTriangulo()
+        public void TipoTriangulo()
         {
-            if (LadoA == LadoB)
+            //Equilatero
+            if (Hipotenusa == CatetoA && Hipotenusa == CatetoB)
             {
-                if (LadoA == LadoC)
-                {
-                    MessageBox.Show("Triangulo Equilatero!");
-                   
-                }
-                else
-                {
-                    MessageBox.Show("Triangulo Escaleno!");
-                }
+                MessageBox.Show("Triângulo Equilatero!\nÁrea do Triangulo: " + Math.Round(Math.Pow(CatetoA, 2) * Math.Sqrt(3)) / 4 + "cm²", "Resultado", MessageBoxButtons.OK);
+                // l² (raiz de 3) / 4 
             }
             else
             {
-                if (LadoB != LadoC)
+                //Retangulo
+                if ((Hipotenusa > CatetoA && Hipotenusa > CatetoB) && (CatetoA == Altura || CatetoB == Altura))
                 {
-                    //Escaleno
-                    MessageBox.Show("Triangulo Escaleno!");
+                    MessageBox.Show("Triângulo Retângulo!\nÁrea do Triangulo: " + CatetoA * CatetoB / 2 + "cm²", "Resultado", MessageBoxButtons.OK);
                 }
                 else
                 {
-                    //Retangulo
-                    MessageBox.Show("Triangulo Retangulo!");
+                    double p = (Hipotenusa + CatetoA + CatetoB) / 2;
+                    MessageBox.Show("Triângulo Escaleno!\nÁrea: " + Math.Round(Math.Sqrt(p * (p - CatetoA) * (p - CatetoB) * (p - Hipotenusa))) + "cm²", "Resultado", MessageBoxButtons.OK);
                 }
             }
-            return 0;
         }
     }
 }

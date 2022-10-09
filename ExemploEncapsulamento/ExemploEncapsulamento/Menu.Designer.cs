@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTriangulo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,15 +44,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cálculo de Área";
             // 
-            // button1
+            // btnTriangulo
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(12, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 204);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTriangulo.Image = ((System.Drawing.Image)(resources.GetObject("btnTriangulo.Image")));
+            this.btnTriangulo.Location = new System.Drawing.Point(12, 110);
+            this.btnTriangulo.Name = "btnTriangulo";
+            this.btnTriangulo.Size = new System.Drawing.Size(193, 204);
+            this.btnTriangulo.TabIndex = 1;
+            this.btnTriangulo.UseVisualStyleBackColor = true;
+            this.btnTriangulo.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -63,6 +63,7 @@
             this.button2.Size = new System.Drawing.Size(204, 202);
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Menu
             // 
@@ -70,7 +71,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 357);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTriangulo);
             this.Controls.Add(this.label1);
             this.Name = "Menu";
             this.Text = "Menu";
@@ -82,7 +83,7 @@
         #endregion
 
         private Label label1;
-        private Button button1;
+        private Button btnTriangulo;
         private Button button2;
     }
 }
