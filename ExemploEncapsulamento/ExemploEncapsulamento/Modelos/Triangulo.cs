@@ -33,7 +33,6 @@ namespace ExemploEncapsulamento.Modelos
             if (Hipotenusa == CatetoA && Hipotenusa == CatetoB)
             {
                 MessageBox.Show("Triângulo Equilatero!\nÁrea do Triangulo: " + Math.Round(Math.Pow(CatetoA, 2) * Math.Sqrt(3)) / 4 + "cm²", "Resultado", MessageBoxButtons.OK);
-                // l² (raiz de 3) / 4 
             }
             else
             {
@@ -44,6 +43,7 @@ namespace ExemploEncapsulamento.Modelos
                 }
                 else
                 {
+                    //Escaleno
                     double p = (Hipotenusa + CatetoA + CatetoB) / 2;
                     MessageBox.Show("Triângulo Escaleno!\nÁrea: " + Math.Round(Math.Sqrt(p * (p - CatetoA) * (p - CatetoB) * (p - Hipotenusa))) + "cm²", "Resultado", MessageBoxButtons.OK);
                 }
